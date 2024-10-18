@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirección aleatoria a PDF</title>
+</head>
+<body>
+    <h1>Redirigiendo...</h1>
+    <p>Si no eres redirigido automáticamente, por favor haz clic en uno de los siguientes enlaces:</p>
+    <ul>
+        <li><a href="https://drive.google.com/file/d/1ZHtvsqXuRL25JAdcqBF7uZQm4cUw7yZ2/view?usp=sharing" id="pdf1">PDF 1</a></li>
+        <li><a href="https://drive.google.com/file/d/1MikqNtsf6qJlDgRaBmGnoHr38CU3lYIK/view?usp=sharing" id="pdf2">PDF 2</a></li>
+    </ul>
+
+    <script>
+        window.onload = function() {
+            var pdfs = [
+                'https://drive.google.com/file/d/1ZHtvsqXuRL25JAdcqBF7uZQm4cUw7yZ2/view?usp=sharing',
+                'https://drive.google.com/file/d/1MikqNtsf6qJlDgRaBmGnoHr38CU3lYIK/view?usp=sharing'
+            ];
+            var randomPDF = pdfs[Math.floor(Math.random() * pdfs.length)];
+            window.location.href = randomPDF;
+        }
+    </script>
+</body>
+</html>
